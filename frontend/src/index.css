@@ -1,0 +1,101 @@
+@media only screen and (max-width: 768px) {
+  .data-group {
+    flex-direction: column;
+  }
+  .data-inicio {
+    margin-right: 0 !important;
+  }
+}
+
+.enquete-form {
+  margin: 1rem;
+  overflow: hidden
+}
+
+.enquete-form label {
+  padding-top: 0.5rem;
+}
+
+.enquete-button {
+  margin-top: 1rem;
+  float: right;
+  clear: both;
+}
+
+.respostas-table {
+  width: 100%;
+}
+
+.respostas-table tr {
+  padding: 1rem 0 1rem 0;
+}
+
+.respostas-table tr td {
+  margin: 0 1rem 0 1rem;
+}
+
+.respostas-table tr td:last-child {
+  margin: 0;
+  padding: 0;
+}
+
+.resposta-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.resposta-table-body tr:nth-child(even) {
+  background-color: #F8F8F8;
+}
+
+.resposta-row-1 {
+  flex: 10;
+}
+
+.resposta-row-1 p {
+  margin: 0
+}
+
+.resposta-row-2 {
+  flex: 1;
+}
+
+.resposta-row-3 {
+  float: right;
+  padding: 0
+}
+
+.resposta-row-4 {
+  width: 2rem;
+  display: flex;
+}
+
+.voto-radio {
+  height: 1rem;
+  width: 1rem;
+}
+
+.data-group {
+  display: flex;
+}
+
+.data-group div {
+  flex: 1;
+}
+
+.data-inicio {
+  margin-right: 1rem;
+}
+
+#descricao {
+  height: 6rem;
+}
+
+.button-group-actions button {
+  margin: 1rem 1rem 1rem 0;
+}
+
+.button-group-actions button:last-child {
+  margin-right: 0;
+}
