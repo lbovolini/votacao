@@ -85,4 +85,8 @@ class EnqueteController {
         (new Enquete())->excluir($id);
     }
 
+    public function votar($id) {
+        (new Resposta())->votar($id);
+    }
+
 }

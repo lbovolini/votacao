@@ -32,8 +32,12 @@ class Handler {
                 $this->controller->criar($enquete);
                 break;
             case 'PUT':
-                $enquete = json_decode(file_get_contents('php://input'), true);
-                $this->controller->atualizar($enquete);
+                if (isset($_GET['respostaId'])) {
+                    $this->controller->votar($_GET['respostaId']);
+                } else {
+                    $enquete = json_decode(file_get_contents('php://input'), true);
+                    $this->controller->atualizar($enquete);
+                }
                 break;
         }
     }

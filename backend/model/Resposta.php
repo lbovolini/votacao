@@ -47,7 +47,7 @@ class Resposta {
     }
 
     public function votar($id) {
-        $query = "UPDATE SET votos = votos + 1 WHERE id = ?;";
+        $query = "UPDATE $this->tabela SET votos = votos + 1 WHERE id = ?;";
         $conexao = Conexao::getInstance();
         $stmt = $conexao->prepare($query);
         $stmt->bindParam(1, $id);

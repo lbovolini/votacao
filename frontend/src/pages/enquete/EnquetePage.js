@@ -23,7 +23,8 @@ export default class EnquetePage extends Component {
             validated: false,
             validatedResposta: false,
             respostaTamanho: this.maxRespostaTamanho,
-            disabled: true
+            disabled: true,
+            voto: null
         }
     }
 
@@ -94,7 +95,10 @@ export default class EnquetePage extends Component {
     }
 
     onVote = () => {
-
+        const respostaId = this.state.voto
+        EnqueteService.votar(respostaId)
+            .then(() => this.props.history.push("/"))
+            .catch(console.log)
     }
 
     onChangeTitulo = (e) => {
@@ -113,6 +117,10 @@ export default class EnquetePage extends Component {
         if (this.state.respostaTamanho === 0 && e.target.value.length > this.maxRespostaTamanho) { return }
         this.setState({ descricao: e.target.value })
         this.setState({ respostaTamanho: this.maxRespostaTamanho - e.target.value.length })
+    }
+
+    onChangeResposta = (e) => {
+        this.setState({ voto: e.target.value })
     }
 
     adicionarResposta = () => {
@@ -188,9 +196,9 @@ export default class EnquetePage extends Component {
                     </div>
                     <div>
                         <table className="respostas-table">
-                            <tbody className="resposta-table-body">
+                            <tbody className="resposta-table-body" onChange={(e) => this.onChangeResposta(e)}>
                             {this.state.respostas.map((resposta, index) =>
-                                <Resposta key={index} index={index} votos={resposta.votos} readOnly={this.readOnly} disabled={this.state.disabled} descricao={resposta.descricao} remover={this.removerResposta.bind(this, index)}/>
+                                <Resposta key={index} index={index} resposta={resposta} votos={resposta.votos} readOnly={this.readOnly} disabled={this.state.disabled} descricao={resposta.descricao} remover={this.removerResposta.bind(this, index)}/>
                             )}
                             </tbody>
                         </table>

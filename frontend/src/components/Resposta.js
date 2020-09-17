@@ -19,7 +19,7 @@ export default class Resposta extends Component {
                 </td>
                 }
                 {this.props.readOnly &&
-                <td className="resposta-row-4"><input className="voto-radio" type="radio" name="voto" disabled={this.props.disabled}/></td>
+                <td className="resposta-row-4"><input className="voto-radio" type="radio" name="voto" disabled={this.props.disabled} value={this.props.resposta.id}/></td>
                 }
             </tr>
         )

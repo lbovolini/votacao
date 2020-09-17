@@ -21,6 +21,10 @@ class EnqueteService {
     remover(id) {
         return http.delete(`/?id=${id}`)
     }
+
+    votar(respostaId) {
+        return http.put(`/?respostaId=${respostaId}`)
+    }
 }
 
 export default new EnqueteService()
