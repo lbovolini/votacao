@@ -27,8 +27,8 @@ export default class MostrarTodasEnquetePage extends Component {
 
         return (
             <div className="container">
-                <button onClick={this.onCreate} className="btn btn-primary">Criar Enquete</button>
-                <table className="table">
+                <button onClick={this.onCreate} className="btn btn-primary criar-enquete-button">Criar Enquete</button>
+                <table className="todas-respostas-table">
                     <thead>
                         <tr>
                             <th>Título</th>

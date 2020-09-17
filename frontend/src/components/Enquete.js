@@ -21,8 +21,8 @@ export default class Enquete extends Component {
         const enquete = this.props.enquete
 
         return (
-            <tr>
-                <td onClick={this.onShow}>{enquete.titulo}</td>
+            <tr className="enquete-row">
+                <td className="selectable" onClick={this.onShow}>{enquete.titulo}</td>
                 <td>{this.getLocalDate(enquete.inicio)}</td>
                 <td>{this.getLocalDate(enquete.fim)}</td>
             </tr>

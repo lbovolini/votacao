@@ -99,3 +99,52 @@
 .button-group-actions button:last-child {
   margin-right: 0;
 }
+
+.criar-enquete-button {
+  margin: 1rem;
+  margin-left: 0;
+}
+
+.todas-respostas-table {
+  width: 100%;
+}
+
+.todas-respostas-table tr td {
+  margin: 1rem
+}
+
+.todas-respostas-table tr {
+  padding: 1rem
+}
+
+.todas-respostas-table tr:nth-child(even) {
+  background-color: #F2F2F2;
+}
+
+.enquete-row {
+  display: table-row;
+}
+
+.enquete-row td {
+  margin: 1rem
+}
+
+.enquete-row td:first-child {
+    flex: 10
+}
+
+.todas-respostas-table th, .todas-respostas-table td {
+  padding: 1rem
+}
+
+.todas-respostas-table th:first-child, .todas-respostas-table td:first-child {
+  width: 100%;
+}
+
+.todas-respostas-table th {
+  white-space: nowrap;
+}
+
+.selectable:hover {
+  cursor: pointer;
+}
